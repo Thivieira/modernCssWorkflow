@@ -1,15 +1,19 @@
 {
   "name": "modernCssWorkflow",
   "version": "1.0.0",
-  "description":
-    "Boilerplate for building modern production-ready css workflow.",
+  "description": "Boilerplate for building modern production-ready css workflow.",
   "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "watch": "webpack -w --colors --progress"
   },
-  "keywords": ["css", "postcss", "webpack", "purifycss"],
+  "keywords": [
+    "css",
+    "postcss",
+    "webpack",
+    "purifycss"
+  ],
   "author": "Thiago Vieira",
   "license": "MIT",
   "devDependencies": {
@@ -24,6 +28,7 @@
     "purify-css": "^1.2.5",
     "purifycss-webpack": "^0.7.0",
     "style-loader": "^0.19.1",
+    "url-loader": "^0.6.2",
     "webpack": "^3.10.0"
   }
 }

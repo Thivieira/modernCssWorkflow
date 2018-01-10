@@ -22,6 +22,7 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
+        exclude: /node_modules/,
         use: ExtractTextPlugin.extract({
           fallback: "style-loader",
           use: [
@@ -29,7 +30,15 @@ module.exports = {
             "postcss-loader"
           ]
         })
-      }
+      },
+      { test: /\.svg$/, exclude: /node_modules/, use: 'url-loader?limit=65000&mimetype=image/svg+xml&name=public/fonts/[name].[ext]' },
+      { test: /\.woff$/, exclude: /node_modules/, use: 'url-loader?limit=65000&mimetype=application/font-woff&name=public/fonts/[name].[ext]' },
+      { test: /\.woff2$/, exclude: /node_modules/, use: 'url-loader?limit=65000&mimetype=application/font-woff2&name=public/fonts/[name].[ext]' },
+      { test: /\.[ot]tf$/, exclude: /node_modules/, use: 'url-loader?limit=65000&mimetype=application/octet-stream&name=public/fonts/[name].[ext]' },
+      { test: /\.eot$/, exclude: /node_modules/, use: 'url-loader?limit=65000&mimetype=application/vnd.ms-fontobject&name=public/fonts/[name].[ext]' }
+  ]
+},
+
     ]
   },
   plugins: [
