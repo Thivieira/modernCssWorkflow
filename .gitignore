@@ -57,4 +57,7 @@ typings/
 # dotenv environment variables file
 .env
 
+<<<<<<< HEAD
 /dist
+=======
+>>>>>>> 0110bb9bcddb028302616bb8cb93ba93ce22f8c6
