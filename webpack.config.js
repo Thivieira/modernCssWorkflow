@@ -31,14 +31,50 @@ module.exports = {
           ]
         })
       },
-      { test: /\.svg$/, exclude: /node_modules/, use: 'url-loader?limit=65000&mimetype=image/svg+xml&name=public/fonts/[name].[ext]' },
-      { test: /\.woff$/, exclude: /node_modules/, use: 'url-loader?limit=65000&mimetype=application/font-woff&name=public/fonts/[name].[ext]' },
-      { test: /\.woff2$/, exclude: /node_modules/, use: 'url-loader?limit=65000&mimetype=application/font-woff2&name=public/fonts/[name].[ext]' },
-      { test: /\.[ot]tf$/, exclude: /node_modules/, use: 'url-loader?limit=65000&mimetype=application/octet-stream&name=public/fonts/[name].[ext]' },
-      { test: /\.eot$/, exclude: /node_modules/, use: 'url-loader?limit=65000&mimetype=application/vnd.ms-fontobject&name=public/fonts/[name].[ext]' }
-  ]
-},
-
+      {
+        test: /\.svg$/,
+        exclude: /node_modules/,
+        use:
+          "url-loader?limit=65000&mimetype=image/svg+xml&name=public/fonts/[name].[ext]"
+      },
+      {
+        test: /\.woff$/,
+        exclude: /node_modules/,
+        use:
+          "url-loader?limit=65000&mimetype=application/font-woff&name=public/fonts/[name].[ext]"
+      },
+      {
+        test: /\.woff2$/,
+        exclude: /node_modules/,
+        use:
+          "url-loader?limit=65000&mimetype=application/font-woff2&name=public/fonts/[name].[ext]"
+      },
+      {
+        test: /\.[ot]tf$/,
+        exclude: /node_modules/,
+        use:
+          "url-loader?limit=65000&mimetype=application/octet-stream&name=public/fonts/[name].[ext]"
+      },
+      {
+        test: /\.eot$/,
+        exclude: /node_modules/,
+        use:
+          "url-loader?limit=65000&mimetype=application/vnd.ms-fontobject&name=public/fonts/[name].[ext]"
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name(file) {
+                return "[path][name].[ext]?[hash]";
+              },
+              publicPath: "dist/"
+            }
+          }
+        ]
+      }
     ]
   },
   plugins: [
