@@ -5,9 +5,10 @@ const PurifyCSSPlugin = require("purifycss-webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
+const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const buildPath = __dirname + "/dist";
 // the path(s) that should be cleaned
-let pathsToClean = ["dist", "build"];
+let pathsToClean = ["dist"];
 
 module.exports = {
   entry: {
@@ -121,6 +122,7 @@ module.exports = {
       }
     }),
     new webpack.HashedModuleIdsPlugin(),
+    new OptimizeCssAssetsPlugin(),
     new CleanWebpackPlugin(pathsToClean)
   ]
 };

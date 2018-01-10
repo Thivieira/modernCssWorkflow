@@ -138,6 +138,10 @@ assert@^1.1.1:
   dependencies:
     util "0.10.3"
 
+ast-types@0.9.6:
+  version "0.9.6"
+  resolved "https://registry.yarnpkg.com/ast-types/-/ast-types-0.9.6.tgz#102c9e9e9005d3e7e3829bf0c4fa24ee862ee9b9"
+
 async-each@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/async-each/-/async-each-1.0.1.tgz#19d386a1d9edc6e7c1c85d388aedbcc56d33602d"
@@ -682,7 +686,7 @@ cssesc@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/cssesc/-/cssesc-0.1.0.tgz#c814903e45623371a0477b40109aaafbeeaddbb4"
 
-cssnano@^3.10.0:
+cssnano@^3.10.0, cssnano@^3.4.0:
   version "3.10.0"
   resolved "https://registry.yarnpkg.com/cssnano/-/cssnano-3.10.0.tgz#4f38f6cea2b9b17fa01490f23f1dc68ea65c1c38"
   dependencies:
@@ -931,6 +935,13 @@ es6-symbol@3.1.1, es6-symbol@^3.1.1, es6-symbol@~3.1.1:
     d "1"
     es5-ext "~0.10.14"
 
+es6-templates@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/es6-templates/-/es6-templates-0.2.3.tgz#5cb9ac9fb1ded6eb1239342b81d792bbb4078ee4"
+  dependencies:
+    recast "~0.11.12"
+    through "~2.3.6"
+
 es6-weak-map@^2.0.1:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/es6-weak-map/-/es6-weak-map-2.0.2.tgz#5e3ab32251ffd1538a1f8e5ffa1357772f92d96f"
@@ -960,6 +971,10 @@ esprima@^2.6.0:
 esprima@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/esprima/-/esprima-4.0.0.tgz#4499eddcd1110e0b218bacf2fa7f7f59f55ca804"
+
+esprima@~3.1.0:
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/esprima/-/esprima-3.1.3.tgz#fdca51cee6133895e3c88d535ce49dbff62a4633"
 
 esrecurse@^4.1.0:
   version "4.2.0"
@@ -1285,7 +1300,17 @@ html-comment-regex@^1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/html-comment-regex/-/html-comment-regex-1.1.1.tgz#668b93776eaae55ebde8f3ad464b307a4963625e"
 
-html-minifier@^3.2.3:
+html-loader@^0.5.4:
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/html-loader/-/html-loader-0.5.4.tgz#70f36e30a923cc52536fdc812cec6f556aeb47a4"
+  dependencies:
+    es6-templates "^0.2.3"
+    fastparse "^1.1.1"
+    html-minifier "^3.5.8"
+    loader-utils "^1.1.0"
+    object-assign "^4.1.1"
+
+html-minifier@^3.2.3, html-minifier@^3.5.8:
   version "3.5.8"
   resolved "https://registry.yarnpkg.com/html-minifier/-/html-minifier-3.5.8.tgz#5ccdb1f73a0d654e6090147511f6e6b2ee312700"
   dependencies:
@@ -1582,6 +1607,13 @@ kind-of@^4.0.0:
   dependencies:
     is-buffer "^1.1.5"
 
+last-call-webpack-plugin@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/last-call-webpack-plugin/-/last-call-webpack-plugin-2.1.2.tgz#ad80c6e310998294d2ed2180a68e9589e4768c44"
+  dependencies:
+    lodash "^4.17.4"
+    webpack-sources "^1.0.1"
+
 lazy-cache@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/lazy-cache/-/lazy-cache-1.0.4.tgz#a1d78fc3a50474cb80845d3b3b6e1da49a446e8e"
@@ -1641,7 +1673,7 @@ lodash.uniq@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
 
-lodash@^4.14.0, lodash@^4.17.3:
+lodash@^4.14.0, lodash@^4.17.3, lodash@^4.17.4:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
@@ -1914,6 +1946,13 @@ once@^1.3.0, once@^1.3.3:
   resolved "https://registry.yarnpkg.com/once/-/once-1.4.0.tgz#583b1aa775961d4b113ac17d9c50baef9dd76bd1"
   dependencies:
     wrappy "1"
+
+optimize-css-assets-webpack-plugin@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/optimize-css-assets-webpack-plugin/-/optimize-css-assets-webpack-plugin-3.2.0.tgz#09a40c4cefde1dd0142444a873c56aa29eb18e6f"
+  dependencies:
+    cssnano "^3.4.0"
+    last-call-webpack-plugin "^2.1.2"
 
 os-browserify@^0.3.0:
   version "0.3.0"
@@ -2330,6 +2369,10 @@ pretty-error@^2.0.2:
     renderkid "^2.0.1"
     utila "~0.4"
 
+private@~0.1.5:
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/private/-/private-0.1.8.tgz#2381edb3689f7a53d653190060fcf822d2f368ff"
+
 process-nextick-args@~1.0.6:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/process-nextick-args/-/process-nextick-args-1.0.7.tgz#150e20b756590ad3f91093f25a4f2ad8bff30ba3"
@@ -2477,6 +2520,15 @@ readdirp@^2.0.0:
     minimatch "^3.0.2"
     readable-stream "^2.0.2"
     set-immediate-shim "^1.0.1"
+
+recast@~0.11.12:
+  version "0.11.23"
+  resolved "https://registry.yarnpkg.com/recast/-/recast-0.11.23.tgz#451fd3004ab1e4df9b4e4b66376b2a21912462d3"
+  dependencies:
+    ast-types "0.9.6"
+    esprima "~3.1.0"
+    private "~0.1.5"
+    source-map "~0.5.0"
 
 reduce-css-calc@^1.2.6:
   version "1.3.0"
@@ -2699,7 +2751,7 @@ source-map-url@~0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/source-map-url/-/source-map-url-0.3.0.tgz#7ecaf13b57bcd09da8a40c5d269db33799d4aaf9"
 
-source-map@0.5.x, source-map@^0.5.3, source-map@^0.5.6, source-map@~0.5.1, source-map@~0.5.3:
+source-map@0.5.x, source-map@^0.5.3, source-map@^0.5.6, source-map@~0.5.0, source-map@~0.5.1, source-map@~0.5.3:
   version "0.5.7"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.5.7.tgz#8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc"
 
@@ -2884,6 +2936,10 @@ tar@^2.2.1:
     block-stream "*"
     fstream "^1.0.2"
     inherits "2"
+
+through@~2.3.6:
+  version "2.3.8"
+  resolved "https://registry.yarnpkg.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
 
 timers-browserify@^2.0.4:
   version "2.0.4"

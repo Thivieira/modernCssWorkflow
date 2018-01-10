@@ -1,1 +1,2 @@
-require("./style.css");
+require("./stylesheet/normalize.css");
+require("./stylesheet/style.css");
