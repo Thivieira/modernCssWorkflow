@@ -4,13 +4,17 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const PurifyCSSPlugin = require("purifycss-webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
 const buildPath = __dirname + "/dist";
+// the path(s) that should be cleaned
+let pathsToClean = ["dist", "build"];
+
 module.exports = {
   entry: {
     app: "./src/app.js"
   },
   output: {
-    filename: "[name].js",
+    filename: "[name].[chunkhash].js",
     path: buildPath
   },
   devtool: "cheap-module-source-map",
@@ -20,7 +24,10 @@ module.exports = {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
           fallback: "style-loader",
-          use: ["css-loader", "postcss-loader"]
+          use: [
+            { loader: "css-loader", options: { minimize: true } },
+            "postcss-loader"
+          ]
         })
       }
     ]
@@ -68,6 +75,7 @@ module.exports = {
         comments: false
       }
     }),
-    new webpack.HashedModuleIdsPlugin()
+    new webpack.HashedModuleIdsPlugin(),
+    new CleanWebpackPlugin(pathsToClean)
   ]
 };
